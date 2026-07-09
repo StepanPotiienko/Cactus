@@ -125,7 +125,7 @@ const translations = {
 
     // Footer
     'footer.github': 'GitHub',
-    'footer.docs': 'Hermes Docs',
+
     'footer.contact': 'Contact',
     'footer.privacy': 'Privacy',
     'footer.rights': '© 2026 Stepan Potiienko. All rights reserved.',
@@ -258,7 +258,7 @@ const translations = {
 
     // Footer
     'footer.github': 'GitHub',
-    'footer.docs': 'Документація Hermes',
+
     'footer.contact': 'Контакт',
     'footer.privacy': 'Приватність',
     'footer.rights': '© 2026 Степан Потієнко. Усі права захищені.',
