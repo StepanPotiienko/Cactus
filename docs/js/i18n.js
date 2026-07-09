@@ -34,6 +34,8 @@ const translations = {
     'features.caffeinate.desc': 'Keep your Mac awake during long AI tasks with a simple toggle and timer. No more sleep interruptions.',
     'features.notes.title': 'Notes Vault',
     'features.notes.desc': 'Connect an Obsidian vault, browse your notes, and launch Obsidian directly from Cactus. Your knowledge, organized.',
+    'features.knowledge.title': 'Knowledge Graph',
+    'features.knowledge.desc': 'Visualize connections between your notes, skills, and AI sessions as an interactive graph. Discover hidden relationships in your knowledge.',
 
     // Screenshots
     'screenshots.title': 'See it in action',
@@ -167,6 +169,8 @@ const translations = {
     'features.caffeinate.desc': 'Не давайте Mac заснути під час довгих AI-задач простим перемикачем і таймером. Більше без перерв.',
     'features.notes.title': 'Сховище нотаток',
     'features.notes.desc': 'Підключіть Obsidian-сховище, переглядайте нотатки та запускайте Obsidian прямо з Cactus. Ваші знання, організовані.',
+    'features.knowledge.title': 'Граф знань',
+    'features.knowledge.desc': 'Візуалізуйте зв\'язки між нотатками, скілами та AI-сесіями як інтерактивний граф. Відкрийте приховані зв\'язки у ваших знаннях.',
 
     // Screenshots
     'screenshots.title': 'Подивіться у дії',
