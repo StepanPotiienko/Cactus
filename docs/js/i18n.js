@@ -14,7 +14,6 @@ const translations = {
     // Hero
     'hero.title': 'Cactus',
     'hero.tagline': 'Your AI workflow, simplified. No terminal required.',
-    'hero.download': 'Download Cactus',
     'hero.learn': 'Learn more',
     'hero.platforms': 'Available for macOS · Windows · Linux',
 
@@ -41,7 +40,6 @@ const translations = {
     'screenshots.title': 'See it in action',
     'screenshots.coming': 'Coming Soon',
     'screenshots.text': 'Cactus is actively under development. Be the first to know when it\'s ready!',
-    'screenshots.notify': 'Notify me',
 
     // How it works
     'how.title': 'How it works',
@@ -53,16 +51,9 @@ const translations = {
     'how.step3.desc': 'Browse skills, pick your model, manage notes, and let Cactus handle the rest. That\'s it.',
 
     // Download
-    'download.title': 'Download Cactus',
-    'download.subtitle': 'Free · Open beta · No account required',
     'download.detecting': 'Detecting your platform…',
     'download.other': 'Other platforms:',
     'download.releases': 'View all releases →',
-    'download.btn.mac': 'Download for macOS',
-    'download.btn.win': 'Download for Windows',
-    'download.btn.linux': 'Download for Linux',
-    'download.fallback': 'Download from GitHub Releases →',
-    'download.no.release': 'First release coming soon — notify me!',
 
     // Requirements
     'req.title': 'System Requirements',
@@ -149,7 +140,6 @@ const translations = {
     // Hero
     'hero.title': 'Cactus',
     'hero.tagline': 'Ваш AI-воркфлоу, спрощено. Без терміналу.',
-    'hero.download': 'Завантажити Cactus',
     'hero.learn': 'Дізнатися більше',
     'hero.platforms': 'Доступно для macOS · Windows · Linux',
 
@@ -176,7 +166,6 @@ const translations = {
     'screenshots.title': 'Подивіться у дії',
     'screenshots.coming': 'Незабаром',
     'screenshots.text': 'Cactus активно розробляється. Дізнайтеся першим, коли все буде готово!',
-    'screenshots.notify': 'Повідомити мене',
 
     // How it works
     'how.title': 'Як це працює',
@@ -188,16 +177,9 @@ const translations = {
     'how.step3.desc': 'Переглядайте скіли, обирайте модель, керуйте нотатками — Cactus зробить решту. Ось і все.',
 
     // Download
-    'download.title': 'Завантажити Cactus',
-    'download.subtitle': 'Безкоштовно · Відкрита бета · Без реєстрації',
     'download.detecting': 'Визначаємо вашу платформу…',
     'download.other': 'Інші платформи:',
     'download.releases': 'Усі релізи →',
-    'download.btn.mac': 'Завантажити для macOS',
-    'download.btn.win': 'Завантажити для Windows',
-    'download.btn.linux': 'Завантажити для Linux',
-    'download.fallback': 'Завантажити з GitHub Releases →',
-    'download.no.release': 'Перший реліз незабаром — повідомте мене!',
 
     // Requirements
     'req.title': 'Системні вимоги',

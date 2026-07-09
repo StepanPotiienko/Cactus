@@ -414,35 +414,7 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 24px;
 }
 
-.signup-form {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.signup-input {
-  padding: 14px 20px;
-  border: 2px solid var(--sand-dark);
-  border-radius: var(--radius-sm);
-  font-size: 1rem;
-  background: var(--white);
-  color: var(--brown);
-  outline: none;
-  transition: border var(--transition);
-  flex: 1;
-  min-width: 200px;
-}
-.signup-input:focus { border-color: var(--terracotta); }
-
-.signup-status {
-  margin-top: 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  min-height: 1.2em;
-}
-.signup-status.success { color: var(--green); }
-.signup-status.error { color: #c0392b; }
+/* Signup form removed — now using mailto link */
 
 /* ===== HOW IT WORKS ===== */
 .steps {
@@ -807,8 +779,6 @@ img { max-width: 100%; height: auto; }
   .hero h1 { font-size: 2rem; }
   .hero-cta { flex-direction: column; }
   .features-grid { grid-template-columns: 1fr; }
-  .signup-form { flex-direction: column; }
-  .signup-input { min-width: auto; }
 }
 
 /* ===== SCROLLBAR (dark sections) ===== */
