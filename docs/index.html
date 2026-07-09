@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cactus — Desktop GUI for Hermes Agent</title>
+  <meta name="description" content="Cactus is a cross-platform desktop app that helps non-tech users set up and manage their Hermes Agent AI workflow. Download for macOS, Windows, and Linux.">
+  <meta name="keywords" content="Cactus, Hermes Agent, AI assistant, desktop app, Electron, non-tech, GUI, setup wizard">
+  <meta name="author" content="Stepan Potiienko">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cactus — Desktop GUI for Hermes Agent">
+  <meta property="og:description" content="Cross-platform desktop app that helps non-tech users set up and manage their Hermes Agent AI workflow.">
+  <meta property="og:image" content="assets/og-image.svg">
+  <meta property="og:url" content="https://stepanpotiienko.github.io/Cactus/">
+  <meta property="og:site_name" content="Cactus">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cactus — Desktop GUI for Hermes Agent">
+  <meta name="twitter:description" content="Cross-platform desktop app for non-tech users to manage Hermes Agent AI workflow.">
+  <meta name="twitter:image" content="assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/cactus-logo.svg">
+  <link rel="apple-touch-icon" href="assets/cactus-logo.svg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cactus",
+    "applicationCategory": "DesktopApplication",
+    "operatingSystem": "macOS, Windows, Linux",
+    "description": "Cross-platform Electron desktop app that helps non-tech users set up and manage their Hermes Agent AI workflow.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Stepan Potiienko"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="assets/cactus-logo.svg" alt="Cactus" class="nav-logo-icon" width="32" height="32">
+        <span>Cactus</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how-it-works" data-i18n="nav.how">How it works</a>
+        <a href="#download" data-i18n="nav.download">Download</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-current">EN</span> / <span class="lang-other">UA</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="assets/cactus-logo.svg" alt="Cactus Logo" class="hero-logo" width="120" height="120">
+      <h1 data-i18n="hero.title">Cactus</h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">Your AI workflow, simplified. No terminal required.</p>
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-primary" data-i18n="hero.download">Download Cactus</a>
+        <a href="#features" class="btn btn-secondary" data-i18n="hero.learn">Learn more</a>
+      </div>
+      <p class="hero-platforms" data-i18n="hero.platforms">Available for macOS · Windows · Linux</p>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,40 1440,60 L1440,120 L0,120 Z" fill="#F5E6D3" opacity="0.15"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IS CACTUS ===== -->
+  <section class="section section-light" id="what">
+    <div class="container">
+      <h2 class="section-title" data-i18n="what.title">What is Cactus?</h2>
+      <p class="section-text" data-i18n="what.text">Cactus is a cross-platform desktop application that provides a friendly graphical interface for <strong>Hermes Agent</strong> — a powerful AI assistant. Instead of typing commands in a terminal, Cactus lets you configure AI providers, install skills, manage notes, and control your workflow — all with a few clicks.</p>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section section-dark" id="features">
+    <div class="container">
+      <h2 class="section-title" data-i18n="features.title">Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🪄</div>
+          <h3 data-i18n="features.wizard.title">Setup Wizard</h3>
+          <p data-i18n="features.wizard.desc">Detects and installs everything you need — Homebrew, Python, Hermes Agent, and your API key. One click, done.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 data-i18n="features.models.title">Model Picker</h3>
+          <p data-i18n="features.models.desc">Choose your AI provider and model from a simple dropdown. Supports OpenRouter, Anthropic, Gemini, DeepSeek, xAI, and Z.AI.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧩</div>
+          <h3 data-i18n="features.skills.title">Skills Marketplace</h3>
+          <p data-i18n="features.skills.desc">Browse, search, and install Hermes Agent skills — extra capabilities for your AI assistant — without touching the CLI.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☕</div>
+          <h3 data-i18n="features.caffeinate.title">Caffeinate Controller</h3>
+          <p data-i18n="features.caffeinate.desc">Keep your Mac awake during long AI tasks with a simple toggle and timer. No more sleep interruptions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3 data-i18n="features.notes.title">Notes Vault</h3>
+          <p data-i18n="features.notes.desc">Connect an Obsidian vault, browse your notes, and launch Obsidian directly from Cactus. Your knowledge, organized.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREENSHOTS / COMING SOON ===== -->
+  <section class="section section-light" id="screenshots">
+    <div class="container">
+      <h2 class="section-title" data-i18n="screenshots.title">See it in action</h2>
+      <div class="coming-soon">
+        <div class="coming-soon-icon">🌵</div>
+        <h3 data-i18n="screenshots.coming">Coming Soon</h3>
+        <p data-i18n="screenshots.text">Cactus is actively under development. Be the first to know when it's ready!</p>
+        <!-- Email signup form -->
+        <form class="signup-form" id="signupForm">
+          <input type="email" id="emailInput" placeholder="you@example.com" required class="signup-input" aria-label="Email address">
+          <button type="submit" class="btn btn-primary" data-i18n="screenshots.notify">Notify me</button>
+        </form>
+        <p class="signup-status" id="signupStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section-light" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title" data-i18n="how.title">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 data-i18n="how.step1.title">Download & Install</h3>
+          <p data-i18n="how.step1.desc">Download Cactus for your platform. Open it like any other app — no terminal needed.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 data-i18n="how.step2.title">Follow the Wizard</h3>
+          <p data-i18n="how.step2.desc">The setup wizard installs Hermes Agent and Python, then helps you add your AI API key.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 data-i18n="how.step3.title">Use Your AI</h3>
+          <p data-i18n="how.step3.desc">Browse skills, pick your model, manage notes, and let Cactus handle the rest. That's it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOWNLOAD ===== -->
+  <section class="section section-dark" id="download">
+    <div class="container">
+      <h2 class="section-title" data-i18n="download.title">Download Cactus</h2>
+      <p class="section-subtitle" id="downloadSubtitle" data-i18n="download.subtitle">Free · Open beta · No account required</p>
+
+      <!-- Primary download button (auto-detected OS) -->
+      <div class="download-primary">
+        <button class="btn btn-download" id="downloadPrimary" disabled>
+          <span id="downloadPrimaryText" data-i18n="download.detecting">Detecting your platform…</span>
+        </button>
+        <p class="download-version" id="downloadVersion"></p>
+      </div>
+
+      <!-- Other platforms -->
+      <div class="download-other">
+        <p data-i18n="download.other" class="download-other-label">Other platforms:</p>
+        <div class="download-buttons">
+          <button class="btn btn-secondary btn-sm" data-os="macos" id="dlMac">
+            <span>macOS</span> <span class="dl-arch" id="dlMacArch"></span>
+          </button>
+          <button class="btn btn-secondary btn-sm" data-os="windows" id="dlWin">
+            <span>Windows</span> <span class="dl-arch"></span>
+          </button>
+          <button class="btn btn-secondary btn-sm" data-os="linux" id="dlLinux">
+            <span>Linux</span> <span class="dl-arch"></span>
+          </button>
+        </div>
+        <a href="#" id="releasesLink" class="download-releases" target="_blank" rel="noopener" data-i18n="download.releases">View all releases →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REQUIREMENTS ===== -->
+  <section class="section section-light" id="requirements">
+    <div class="container container-narrow">
+      <h2 class="section-title" data-i18n="req.title">System Requirements</h2>
+      <table class="req-table">
+        <thead>
+          <tr>
+            <th data-i18n="req.param">Parameter</th>
+            <th data-i18n="req.min">Minimum</th>
+            <th data-i18n="req.rec">Recommended</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="req.os.mac">macOS</td><td>11.0 (Big Sur)</td><td>13.0+ (Ventura)</td></tr>
+          <tr><td data-i18n="req.os.win">Windows</td><td>10 (64-bit)</td><td>11</td></tr>
+          <tr><td data-i18n="req.os.linux">Linux</td><td>Ubuntu 20.04+ / glibc 2.31+</td><td>Ubuntu 22.04+</td></tr>
+          <tr><td data-i18n="req.ram">RAM</td><td>4 GB</td><td>8 GB</td></tr>
+          <tr><td data-i18n="req.disk">Disk Space</td><td>500 MB</td><td>1 GB</td></tr>
+          <tr><td data-i18n="req.internet">Internet</td><td>Required</td><td>Broadband</td></tr>
+          <tr><td data-i18n="req.python">Python</td><td>3.10+ (auto-installed)</td><td>3.12+</td></tr>
+          <tr><td data-i18n="req.hermes">Hermes Agent</td><td>Auto-installed by wizard</td><td>Latest</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section class="section section-light" id="roadmap">
+    <div class="container">
+      <h2 class="section-title" data-i18n="roadmap.title">Roadmap</h2>
+      <div class="timeline">
+        <div class="timeline-item timeline-now">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="roadmap.now">Now (v1)</h3>
+            <ul>
+              <li data-i18n="roadmap.now.1">Setup Wizard</li>
+              <li data-i18n="roadmap.now.2">Model/Provider Picker</li>
+              <li data-i18n="roadmap.now.3">Skills Marketplace</li>
+              <li data-i18n="roadmap.now.4">Caffeinate (macOS)</li>
+              <li data-i18n="roadmap.now.5">Notes Vault</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item timeline-soon">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="roadmap.soon">Soon (v1.1)</h3>
+            <ul>
+              <li data-i18n="roadmap.soon.1">Auto-update</li>
+              <li data-i18n="roadmap.soon.2">Caffeinate (Win/Linux)</li>
+              <li data-i18n="roadmap.soon.3">Cron Manager</li>
+              <li data-i18n="roadmap.soon.4">Session Browser</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item timeline-later">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 data-i18n="roadmap.later">Later (v2)</h3>
+            <ul>
+              <li data-i18n="roadmap.later.1">MCP Manager</li>
+              <li data-i18n="roadmap.later.2">Gateway Setup</li>
+              <li data-i18n="roadmap.later.3">Multi-profile</li>
+              <li data-i18n="roadmap.later.4">i18n / Telemetry</li>
+              <li data-i18n="roadmap.later.5">Code Signing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-light" id="faq">
+    <div class="container container-narrow">
+      <h2 class="section-title" data-i18n="faq.title">FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">Is Cactus free?</summary>
+          <p data-i18n="faq.a1">Yes, Cactus is completely free. You only pay for API usage from your AI provider (OpenRouter, Anthropic, etc.).</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">What is Hermes Agent?</summary>
+          <p data-i18n="faq.a2">Hermes Agent is an AI assistant by Nous Research that runs on your computer. It can use tools, search the web, manage files, and more. Cactus provides a graphical interface so you don't need to use the terminal.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">Do I need to know how to code?</summary>
+          <p data-i18n="faq.a3">No! Cactus is designed for non-tech users. The setup wizard handles installation, and the dashboard gives you a simple GUI for everything. The terminal is never shown.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">Which platforms are supported?</summary>
+          <p data-i18n="faq.a4">Cactus runs on macOS, Windows, and Linux. It's a cross-platform Electron app, so the experience is the same everywhere.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">Do I need an API key?</summary>
+          <p data-i18n="faq.a5">Yes, you need an API key from an AI provider (OpenRouter, Anthropic, Google Gemini, DeepSeek, xAI, or Z.AI). Cactus helps you set it up during the wizard. Costs depend on your provider's pricing.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">Which AI providers are supported?</summary>
+          <p data-i18n="faq.a6">OpenRouter, Anthropic (Claude), Google Gemini, DeepSeek, xAI (Grok), and Z.AI (GLM). You can switch between them anytime in Settings.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q7">Is my data sent to the cloud?</summary>
+          <p data-i18n="faq.a7">Cactus runs locally on your machine. Your notes and configuration stay on your computer. Only your AI conversations are sent to your chosen provider's API — that's how AI models work.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q8">Why "Cactus"?</summary>
+          <p data-i18n="faq.a8">A cactus is resilient, low-maintenance, and thrives in tough environments — just like we want your AI workflow to be. Plus, the name was available. 🌵</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q9">Is it open source?</summary>
+          <p data-i18n="faq.a9">Not yet. Cactus is currently closed-source, but we're considering open-sourcing it in the future. The landing page itself is hosted on GitHub.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q10">How do I update Cactus?</summary>
+          <p data-i18n="faq.a10">In v1, you check for updates manually via Settings → Check for Updates. Auto-update is coming in v1.1.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q11">Will it work without Hermes installed?</summary>
+          <p data-i18n="faq.a11">Yes! The setup wizard detects whether Hermes Agent is installed and installs it automatically if needed. You don't need to install anything manually.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q12">Does it work offline?</summary>
+          <p data-i18n="faq.a12">Cactus itself works offline for browsing notes and viewing settings. However, AI conversations require an internet connection to reach your provider's API.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <img src="assets/cactus-logo.svg" alt="Cactus" class="footer-logo" width="28" height="28">
+        <span>Cactus</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="footerGithub" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
+        <a href="https://hermes-agent.nousresearch.com/docs/" target="_blank" rel="noopener" data-i18n="footer.docs">Hermes Docs</a>
+        <a href="mailto:stepan@ap-digitals.com" data-i18n="footer.contact">Contact</a>
+        <a href="#" id="footerPrivacy" data-i18n="footer.privacy">Privacy</a>
+      </div>
+      <div class="footer-copy">
+        <span data-i18n="footer.rights">© 2026 Stepan Potiienko. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/download.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
