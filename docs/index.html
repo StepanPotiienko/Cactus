@@ -12,7 +12,10 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cactus — Desktop GUI for Hermes Agent">
   <meta property="og:description" content="Cross-platform desktop app that helps non-tech users set up and manage their Hermes Agent AI workflow.">
-  <meta property="og:image" content="assets/og-image.svg">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://stepanpotiienko.github.io/Cactus/">
   <meta property="og:site_name" content="Cactus">
 
@@ -50,7 +53,8 @@
   }
   </script>
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics — add your GA4 ID when ready -->
+  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,6 +62,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+  -->
 </head>
 <body>
 
@@ -68,7 +73,7 @@
         <img src="assets/cactus-logo.svg" alt="Cactus" class="nav-logo-icon" width="32" height="32">
         <span>Cactus</span>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#how-it-works" data-i18n="nav.how">How it works</a>
         <a href="#download" data-i18n="nav.download">Download</a>
@@ -78,6 +83,9 @@
           <span class="lang-current">EN</span> / <span class="lang-other">UA</span>
         </button>
       </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -150,12 +158,12 @@
         <div class="coming-soon-icon">🌵</div>
         <h3 data-i18n="screenshots.coming">Coming Soon</h3>
         <p data-i18n="screenshots.text">Cactus is actively under development. Be the first to know when it's ready!</p>
-        <!-- Email signup form -->
-        <form class="signup-form" id="signupForm">
-          <input type="email" id="emailInput" placeholder="you@example.com" required class="signup-input" aria-label="Email address">
-          <button type="submit" class="btn btn-primary" data-i18n="screenshots.notify">Notify me</button>
-        </form>
-        <p class="signup-status" id="signupStatus" role="status" aria-live="polite"></p>
+        <!-- Notify via email -->
+        <a href="mailto:stepan@ap-digitals.com?subject=Cactus%20Notification%20Signup&body=Notify%20me%20when%20Cactus%20is%20ready!"
+           class="btn btn-primary" style="margin-top: 20px; text-decoration: none;">
+          📧 Notify me
+        </a>
+        <p style="margin-top: 12px; font-size: 0.9rem; color: var(--brown-light);">stepan@ap-digitals.com</p>
       </div>
     </div>
   </section>
@@ -371,6 +379,26 @@
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/download.js"></script>
-  <script src="js/signup.js"></script>
+  <script>
+    // Hamburger menu toggle
+    (function () {
+      var burger = document.getElementById('navBurger');
+      var navLinks = document.getElementById('navLinks');
+      if (!burger || !navLinks) return;
+
+      burger.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
