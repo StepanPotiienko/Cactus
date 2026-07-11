@@ -30,7 +30,7 @@
   
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -122,11 +122,11 @@
 
       <p class="hero-platforms" data-i18n="hero.platforms">Available for macOS · Windows · Linux</p>
 
-      <!-- Scroll indicator: 200-300px below platforms -->
-      <div class="scroll-indicator" aria-hidden="true">
+      <!-- Scroll indicator: clickable, scrolls to next section -->
+      <a href="#what" class="scroll-indicator" aria-label="Scroll to next section">
         <span>Scroll</span>
         <div class="arrow"></div>
-      </div>
+      </a>
     </div>
     <div class="hero-wave">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
@@ -190,12 +190,17 @@
         <div class="coming-soon-icon">🌵</div>
         <h3 data-i18n="screenshots.coming">Coming Soon</h3>
         <p data-i18n="screenshots.text">Cactus is actively under development. Be the first to know when it's ready!</p>
-        <!-- Notify via email -->
-        <a href="mailto:stepan@ap-digitals.com?subject=Cactus%20Notification%20Signup&body=Notify%20me%20when%20Cactus%20is%20ready!"
-           class="btn btn-primary" style="margin-top: 20px; text-decoration: none;">
-          📧 Notify me
-        </a>
-        <p style="margin-top: 12px; font-size: 0.9rem; color: var(--brown-light);">stepan@ap-digitals.com</p>
+        <!-- MailChimp newsletter signup (test mode — integrate later) -->
+        <div id="mc_embed_signup" class="mailchimp-form" style="margin-top: 20px;">
+          <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="mailchimp-input" id="mce-EMAIL" placeholder="Enter your email" required>
+            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary mailchimp-btn">
+              📧 Notify me
+            </button>
+            <!-- MailChimp test response area -->
+            <p id="mc-response" class="mailchimp-response" style="display: none;"></p>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -367,7 +372,7 @@
       </div>
       <div class="footer-links">
         <a href="#" id="footerGithub" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
-        <a href="mailto:stepan@ap-digitals.com" data-i18n="footer.contact">Contact</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
         <a href="#" id="footerPrivacy" data-i18n="footer.privacy">Privacy</a>
       </div>
       <div class="footer-copy">
@@ -377,8 +382,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/i18n.js?v=5" defer></script>
-  <script src="js/download.js?v=5" defer></script>
+  <script src="js/i18n.js?v=6" defer></script>
+  <script src="js/download.js?v=6" defer></script>
   <script>
     // Hamburger menu toggle
     (function () {
@@ -397,6 +402,31 @@
           navLinks.classList.remove('open');
           burger.setAttribute('aria-expanded', 'false');
         });
+      });
+    })();
+
+    // MailChimp test handler — simulates subscription (no real API call yet)
+    (function () {
+      var form = document.getElementById('mc-embedded-subscribe-form');
+      var response = document.getElementById('mc-response');
+      if (!form || !response) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = document.getElementById('mce-EMAIL').value.trim();
+
+        if (!email || !email.includes('@')) {
+          response.textContent = 'Please enter a valid email address.';
+          response.className = 'mailchimp-response error';
+          response.style.display = 'block';
+          return;
+        }
+
+        // Test mode: simulate success (replace with real MailChimp API later)
+        response.textContent = '✓ Thanks! We\'ll notify you when Cactus is ready.';
+        response.className = 'mailchimp-response';
+        response.style.display = 'block';
+        form.reset();
       });
     })();
   </script>
