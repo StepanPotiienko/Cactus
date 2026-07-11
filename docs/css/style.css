@@ -5,6 +5,7 @@
 :root {
   --sand: #F5E6D3;
   --sand-dark: #E8D5BD;
+  --sand-darker: #DBC7A8;
   --terracotta: #C67B5C;
   --terracotta-light: #D89B7E;
   --green: #2D5F3F;
@@ -418,8 +419,8 @@ img { max-width: 100%; height: auto; }
 
 /* ===== FEATURES ===== */
 .feature-card {
-  background: var(--charcoal-light);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--sand-darker);
+  border: 1px solid rgba(61, 43, 31, 0.08);
   border-radius: var(--radius);
   padding: 32px;
   text-align: center;
@@ -450,7 +451,7 @@ img { max-width: 100%; height: auto; }
 
 .feature-card p {
   font-size: 0.95rem;
-  color: var(--brown-light);
+  color: var(--brown);
   line-height: 1.5;
 }
 
