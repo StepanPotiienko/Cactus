@@ -300,9 +300,13 @@ img { max-width: 100%; height: auto; }
   width: 100%;
 }
 
-.download-other-hero .btn-sm span:first-child {
-  flex: 1;
+.download-other-hero .btn-sm {
   text-align: center;
+  justify-content: center;
+}
+
+.download-other-hero .btn-sm span {
+  display: inline;
 }
 
 .download-other-hero .btn-secondary {
