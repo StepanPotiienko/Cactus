@@ -48,7 +48,7 @@ img { max-width: 100%; height: auto; }
 /* ===== CONTAINER ===== */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
 .container-narrow { max-width: 760px; }
-.container-wide-60 { max-width: 60vw; margin: 0 auto; padding: 0 24px; }
+.container-wide-60 { max-width: 80vw; margin: 0 auto; padding: 0 24px; }
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -270,7 +270,11 @@ img { max-width: 100%; height: auto; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .download-other-hero .download-other-label {
@@ -455,20 +459,10 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ===== DOWNLOAD ===== */
-.download-primary { text-align: center; margin-bottom: 48px; padding-right: 0; }
-
 .download-version {
   margin-top: 12px;
   font-size: 0.85rem;
   color: #aaa;
-}
-
-.download-other { text-align: center; padding-right: 0; }
-
-.download-other-label {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-bottom: 12px;
 }
 
 .download-buttons {

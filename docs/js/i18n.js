@@ -54,6 +54,11 @@ const translations = {
     'download.detecting': 'Detecting your platform…',
     'download.other': 'Other platforms:',
     'download.releases': 'View all releases →',
+    'download.btn.mac': 'Download for macOS',
+    'download.btn.win': 'Download for Windows',
+    'download.btn.linux': 'Download for Linux',
+    'download.fallback': 'View all releases',
+    'download.no.release': 'Join waitlist',
 
     // Requirements
     'req.title': 'System Requirements',
@@ -180,6 +185,11 @@ const translations = {
     'download.detecting': 'Визначаємо вашу платформу…',
     'download.other': 'Інші платформи:',
     'download.releases': 'Усі релізи →',
+    'download.btn.mac': 'Завантажити для macOS',
+    'download.btn.win': 'Завантажити для Windows',
+    'download.btn.linux': 'Завантажити для Linux',
+    'download.fallback': 'Усі релізи',
+    'download.no.release': 'Приєднатися до списку очікування',
 
     // Requirements
     'req.title': 'Системні вимоги',
