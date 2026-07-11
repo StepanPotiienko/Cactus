@@ -48,7 +48,7 @@ img { max-width: 100%; height: auto; }
 /* ===== CONTAINER ===== */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
 .container-narrow { max-width: 760px; }
-.container.container-wide-60 { max-width: 80vw; }
+.container.container-wide-60 { width: 80%; }
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -836,7 +836,7 @@ img { max-width: 100%; height: auto; }
   .btn-download { font-size: 1rem; padding: 14px 28px; }
   .hero-download { gap: 12px; }
   .hero-learn-more { margin-top: 4px; }
-  .container-wide-60 { max-width: 100%; }
+  .container-wide-60 { width: 100%; }
 }
 
 @media (max-width: 480px) {
