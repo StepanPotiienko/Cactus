@@ -418,9 +418,6 @@ img { max-width: 100%; height: auto; }
 
 /* ===== FEATURES ===== */
 .feature-card {
-  background: var(--charcoal-light);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius);
   padding: 32px;
   text-align: center;
   transition: all var(--transition);
@@ -435,8 +432,6 @@ img { max-width: 100%; height: auto; }
 }
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: var(--terracotta);
-  box-shadow: 0 8px 30px rgba(198, 123, 92, 0.2);
 }
 
 .feature-icon { font-size: 2.5rem; margin-bottom: 16px; }
@@ -514,7 +509,9 @@ img { max-width: 100%; height: auto; }
 .step-arrow {
   font-size: 1.8rem;
   color: var(--terracotta);
-  padding-top: 12px;
+  align-self: center;
+  padding-top: 0;
+  margin-top: -24px;
 }
 
 /* ===== DOWNLOAD ===== */
