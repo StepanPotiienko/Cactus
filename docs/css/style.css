@@ -383,10 +383,10 @@ img { max-width: 100%; height: auto; }
 .section > .container > .section-text { max-width: 680px; }
 
 .section-light { background: var(--sand); }
-.section-dark { background: var(--charcoal); }
+.section-dark { background: var(--sand); }
 
 .section-dark h2,
-.section-dark p { color: var(--white); }
+.section-dark p { color: var(--brown); }
 
 .section-title {
   font-size: 2.2rem;
@@ -396,7 +396,7 @@ img { max-width: 100%; height: auto; }
   color: var(--brown);
 }
 
-.section-dark .section-title { color: var(--white); }
+.section-dark .section-title { color: var(--brown); }
 
 .section-text {
   font-size: 1.15rem;
@@ -414,10 +414,13 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 40px;
 }
 
-.section-dark .section-subtitle { color: #aaa; }
+.section-dark .section-subtitle { color: var(--gray); }
 
 /* ===== FEATURES ===== */
 .feature-card {
+  background: var(--charcoal-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
   padding: 32px;
   text-align: center;
   transition: all var(--transition);
@@ -432,6 +435,8 @@ img { max-width: 100%; height: auto; }
 }
 .feature-card:hover {
   transform: translateY(-4px);
+  border-color: var(--terracotta);
+  box-shadow: 0 8px 30px rgba(198, 123, 92, 0.2);
 }
 
 .feature-icon { font-size: 2.5rem; margin-bottom: 16px; }
@@ -440,12 +445,12 @@ img { max-width: 100%; height: auto; }
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: var(--white);
+  color: var(--brown);
 }
 
 .feature-card p {
   font-size: 0.95rem;
-  color: #b0b0b0;
+  color: var(--brown-light);
   line-height: 1.5;
 }
 
@@ -532,12 +537,12 @@ img { max-width: 100%; height: auto; }
 /* Override btn-secondary for dark section */
 .section-dark .btn-secondary {
   background: transparent;
-  color: var(--white);
-  border-color: var(--white);
+  color: var(--green);
+  border-color: var(--green);
 }
 .section-dark .btn-secondary:hover {
-  background: var(--white);
-  color: var(--charcoal);
+  background: var(--green);
+  color: var(--white);
 }
 
 .dl-arch { font-size: 0.8rem; opacity: 0.7; }
